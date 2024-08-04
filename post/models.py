@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.utils import timezone
 from django.db import models
 
@@ -14,7 +15,7 @@ class Post(models.Model):
         verbose_name_plural = ("Posts")
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         return reverse("Post_detail", kwargs={"pk": self.pk})
