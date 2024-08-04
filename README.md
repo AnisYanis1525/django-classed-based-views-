@@ -1,0 +1,1 @@
+# django-classed-based-views-
